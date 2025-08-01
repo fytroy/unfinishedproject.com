@@ -3,71 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unfinished Project | Modern Fashion Brand</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>LUMINA - Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="main-header">
-    <nav class="nav-bar container">
-        <a href="index.html" class="logo">Unfinished Project</a>
-        <ul class="nav-links">
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">LUMINA</a>
+            <ul class="nav-links">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a class="cart-icon-container">
+                        <svg class="cart-icon" id="open-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <main>
     <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="fade-in">The beauty of what’s to come.</h1>
-            <p class="fade-in">A brand that celebrates the raw beauty of creation.</p>
-            <a href="shop.html" class="btn btn-primary fade-in">Discover the Collection</a>
+        <div class="hero-content fade-in">
+            <h1>Crafted for the Modern Home</h1>
+            <p>Discover our collection of handcrafted, minimalist decor and furniture.</p>
+            <a href="shop.html" class="btn btn-primary">Shop Now</a>
         </div>
     </section>
 
     <section class="about-intro container">
         <h2 class="fade-in">Our Philosophy</h2>
-        <p class="about-text fade-in">
-            Unfinished Project was born from a desire to challenge the polished world of fast fashion. We reject the idea that clothing must be "perfect" to be beautiful. Instead, we embrace the visible marks of the creation process—the threads waiting to be trimmed, the seams that tell a story, and the fabrics that are allowed to simply exist. Each garment is a tribute to the journey of craftsmanship, and a canvas for your own unique story.
-        </p>
+        <p class="about-text fade-in">At LUMINA, we believe in the beauty of simplicity and the power of handcrafted quality. Every piece in our collection is thoughtfully designed to bring tranquility and elegance into your living space, created by skilled artisans who share our passion for timeless design.</p>
     </section>
 
     <section class="featured-products container">
-        <h2 class="fade-in">Featured Pieces</h2>
+        <h2 class="fade-in">Featured Products</h2>
         <div class="product-grid">
-            <a href="#" class="product-card fade-in">
-                <div class="product-image-container">
-                    <img src="images/architect-jacket.jpg" alt="The Architect Jacket">
-                </div>
-                <h3>The Architect Jacket</h3>
-                <p>$249</p>
-                <div class="product-overlay">
-                    <span>View Product</span>
-                </div>
-            </a>
-            <a href="#" class="product-card fade-in">
-                <div class="product-image-container">
-                    <img src="images/sketchbook-shirt.jpg" alt="The Sketchbook Shirt">
-                </div>
-                <h3>The Sketchbook Shirt</h3>
-                <p>$129</p>
-                <div class="product-overlay">
-                    <span>View Product</span>
-                </div>
-            </a>
+            <div class="product-card fade-in">
+                <a href="product.html">
+                    <div class="product-image-container">
+                        <img src="images/featured1.jpg" alt="Featured Product 1">
+                        <div class="product-overlay">
+                            <span>View Product</span>
+                        </div>
+                    </div>
+                    <h3>The Horizon Lamp</h3>
+                    <p>$120.00</p>
+                </a>
+            </div>
+            <div class="product-card fade-in">
+                <a href="product.html">
+                    <div class="product-image-container">
+                        <img src="images/featured2.jpg" alt="Featured Product 2">
+                        <div class="product-overlay">
+                            <span>View Product</span>
+                        </div>
+                    </div>
+                    <h3>Ceramic Vessel</h3>
+                    <p>$75.00</p>
+                </a>
+            </div>
+            <div class="product-card fade-in">
+                <a href="product.html">
+                    <div class="product-image-container">
+                        <img src="images/featured3.jpg" alt="Featured Product 3">
+                        <div class="product-overlay">
+                            <span>View Product</span>
+                        </div>
+                    </div>
+                    <h3>Woven Throw</h3>
+                    <p>$95.00</p>
+                </a>
+            </div>
+            <div class="product-card fade-in">
+                <a href="product.html">
+                    <div class="product-image-container">
+                        <img src="images/featured4.jpg" alt="Featured Product 4">
+                        <div class="product-overlay">
+                            <span>View Product</span>
+                        </div>
+                    </div>
+                    <h3>Minimalist Chair</h3>
+                    <p>$280.00</p>
+                </a>
+            </div>
         </div>
     </section>
 </main>
 
-<footer class="main-footer">
-    <div class="container">
-        <p>&copy; 2025 Unfinished Project. All rights reserved.</p>
+<div class="cart-menu" id="cart-menu">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-btn" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items-menu">
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-menu">$0.00</span>
+        </div>
+        <a href="checkout.html" class="btn btn-primary checkout-btn">Go to Checkout</a>
+    </div>
+</div>
+
+<footer class="modern-footer">
+    <div class="container footer-container">
+        <div class="footer-section">
+            <h3 class="footer-logo">LUMINA</h3>
+            <p>Handcrafted artisan goods made with care and passion.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>123 Artisan Lane, Craft City, 54321</p>
+            <p>info@lumina.com</p>
+            <p>+1 (555) 123-4567</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 LUMINA. All Rights Reserved.</p>
     </div>
 </footer>
 

@@ -3,47 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Unfinished Project</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Contact Us - LUMINA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="main-header">
-  <nav class="nav-bar container">
-    <a href="index.html" class="logo">Unfinished Project</a>
-    <ul class="nav-links">
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav class="nav-bar">
+      <a href="index.html" class="logo">LUMINA</a>
+      <ul class="nav-links">
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a class="cart-icon-container">
+            <svg class="cart-icon" id="open-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span id="cart-count" class="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
   <section class="page-header">
     <div class="container">
-      <h1 class="fade-in">Get in Touch</h1>
-      <p class="fade-in">We'd love to hear from you. Send us a message or find us on social media.</p>
+      <h1>Get In Touch</h1>
+      <p>We'd love to hear from you. Send us a message or visit our studio.</p>
     </div>
   </section>
 
   <section class="contact-content container">
     <div class="contact-form-container fade-in">
       <form class="contact-form">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+        <div class="modern-form-group">
+          <input type="text" id="name" name="name" placeholder=" " required>
+          <label for="name">Your Name</label>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+        <div class="modern-form-group">
+          <input type="email" id="email" name="email" placeholder=" " required>
+          <label for="email">Your Email</label>
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
+        <div class="modern-form-group">
+          <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+          <label for="message">Your Message</label>
         </div>
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
@@ -51,22 +61,69 @@
 
     <div class="contact-info fade-in">
       <div class="info-group">
-        <h3>Customer Service</h3>
-        <p>Email: info@unfinishedproject.com</p>
-        <p>Hours: Mon-Fri, 9am - 5pm EST</p>
+        <h3>Address</h3>
+        <p>123 Artisan Lane</p>
+        <p>Craft City, State 54321</p>
       </div>
       <div class="info-group">
-        <h3>Follow Our Journey</h3>
-        <p>Instagram: @UnfinishedProject_Official</p>
-        <p>TikTok: @UnfinishedProject</p>
+        <h3>Email</h3>
+        <p>info@lumina.com</p>
+      </div>
+      <div class="info-group">
+        <h3>Phone</h3>
+        <p>+1 (555) 123-4567</p>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="main-footer">
-  <div class="container">
-    <p>&copy; 2025 Unfinished Project. All rights reserved.</p>
+<div class="cart-menu" id="cart-menu">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-btn" id="close-cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items-menu">
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cart-total-menu">$0.00</span>
+    </div>
+    <a href="checkout.html" class="btn btn-primary checkout-btn">Go to Checkout</a>
+  </div>
+</div>
+
+<footer class="modern-footer">
+  <div class="container footer-container">
+    <div class="footer-section">
+      <h3 class="footer-logo">LUMINA</h3>
+      <p>Handcrafted artisan goods made with care and passion.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>123 Artisan Lane, Craft City, 54321</p>
+      <p>info@lumina.com</p>
+      <p>+1 (555) 123-4567</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 LUMINA. All Rights Reserved.</p>
   </div>
 </footer>
 

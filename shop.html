@@ -3,89 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | Unfinished Project</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Shop - LUMINA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="main-header">
-    <nav class="nav-bar container">
-        <a href="index.html" class="logo">Unfinished Project</a>
-        <ul class="nav-links">
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">LUMINA</a>
+            <ul class="nav-links">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a class="cart-icon-container">
+                        <svg class="cart-icon" id="open-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <main>
     <section class="page-header">
         <div class="container">
-            <h1 class="fade-in">Our Collections</h1>
-            <p class="fade-in">Explore the beauty in the unfinished, from first drafts to bold prototypes.</p>
+            <h1>Our Collection</h1>
+            <p>Explore our full range of handcrafted goods, from ceramics and lighting to textiles and furniture.</p>
         </div>
     </section>
 
     <section class="shop-content container">
         <div class="shop-grid">
-            <aside class="filter-sidebar fade-in">
-                <h3>Filter by</h3>
-                <div class="filter-group">
+            <aside class="filter-sidebar">
+                <h3 class="fade-in">Filter by</h3>
+                <div class="filter-group fade-in">
                     <h4>Category</h4>
-                    <label><input type="checkbox" name="category" value="jackets"> Jackets</label>
-                    <label><input type="checkbox" name="category" value="shirts"> Shirts</label>
-                    <label><input type="checkbox" name="category" value="trousers"> Trousers</label>
+                    <label><input type="checkbox" name="category" value="ceramics"> Ceramics</label>
+                    <label><input type="checkbox" name="category" value="lighting"> Lighting</label>
+                    <label><input type="checkbox" name="category" value="textiles"> Textiles</label>
+                    <label><input type="checkbox" name="category" value="furniture"> Furniture</label>
                 </div>
-                <div class="filter-group">
+                <div class="filter-group fade-in">
                     <h4>Collection</h4>
-                    <label><input type="checkbox" name="collection" value="first-draft"> First Draft</label>
-                    <label><input type="checkbox" name="collection" value="prototype"> Prototype</label>
+                    <label><input type="checkbox" name="collection" value="classic"> Classic</label>
+                    <label><input type="checkbox" name="collection" value="modern"> Modern</label>
+                    <label><input type="checkbox" name="collection" value="seasonal"> Seasonal</label>
                 </div>
             </aside>
 
-            <div id="product-list" class="product-list">
-                <a href="product.html" class="product-card fade-in" data-category="jackets" data-collection="first-draft">
-                    <div class="product-image-container">
-                        <img src="images/architect-jacket.jpg" alt="The Architect Jacket">
-                    </div>
-                    <h3>The Architect Jacket</h3>
-                    <p>$249</p>
-                    <div class="product-overlay">
-                        <span>View Product</span>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card fade-in" data-category="shirts" data-collection="first-draft">
-                    <div class="product-image-container">
-                        <img src="images/sketchbook-shirt.jpg" alt="The Sketchbook Shirt">
-                    </div>
-                    <h3>The Sketchbook Shirt</h3>
-                    <p>$129</p>
-                    <div class="product-overlay">
-                        <span>View Product</span>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card fade-in" data-category="trousers" data-collection="prototype">
-                    <div class="product-image-container">
-                        <img src="images/prototype-trousers.jpg" alt="The Blueprint Trousers">
-                    </div>
-                    <h3>The Blueprint Trousers</h3>
-                    <p>$189</p>
-                    <div class="product-overlay">
-                        <span>View Product</span>
-                    </div>
-                </a>
+            <div class="product-list" id="product-list">
+                <div class="product-card fade-in" data-category="lighting" data-collection="modern">
+                    <a href="product.html">
+                        <div class="product-image-container">
+                            <img src="images/product1.jpg" alt="Minimalist Pendant Light">
+                            <div class="product-overlay"><span>View Product</span></div>
+                        </div>
+                        <h3>Minimalist Pendant Light</h3>
+                        <p>$180.00</p>
+                    </a>
+                </div>
+                <div class="product-card fade-in" data-category="ceramics" data-collection="classic">
+                    <a href="product.html">
+                        <div class="product-image-container">
+                            <img src="images/product2.jpg" alt="Hand-Thrown Mug">
+                            <div class="product-overlay"><span>View Product</span></div>
+                        </div>
+                        <h3>Hand-Thrown Mug</h3>
+                        <p>$35.00</p>
+                    </a>
+                </div>
+                <div class="product-card fade-in" data-category="textiles" data-collection="seasonal">
+                    <a href="product.html">
+                        <div class="product-image-container">
+                            <img src="images/product3.jpg" alt="Linen Cushion Cover">
+                            <div class="product-overlay"><span>View Product</span></div>
+                        </div>
+                        <h3>Linen Cushion Cover</h3>
+                        <p>$50.00</p>
+                    </a>
+                </div>
+                <div class="product-card fade-in" data-category="furniture" data-collection="classic">
+                    <a href="product.html">
+                        <div class="product-image-container">
+                            <img src="images/product4.jpg" alt="Oak Side Table">
+                            <div class="product-overlay"><span>View Product</span></div>
+                        </div>
+                        <h3>Oak Side Table</h3>
+                        <p>$320.00</p>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 </main>
 
-<footer class="main-footer">
-    <div class="container">
-        <p>&copy; 2025 Unfinished Project. All rights reserved.</p>
+<div class="cart-menu" id="cart-menu">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-btn" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items-menu">
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-menu">$0.00</span>
+        </div>
+        <a href="checkout.html" class="btn btn-primary checkout-btn">Go to Checkout</a>
+    </div>
+</div>
+
+<footer class="modern-footer">
+    <div class="container footer-container">
+        <div class="footer-section">
+            <h3 class="footer-logo">LUMINA</h3>
+            <p>Handcrafted artisan goods made with care and passion.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>123 Artisan Lane, Craft City, 54321</p>
+            <p>info@lumina.com</p>
+            <p>+1 (555) 123-4567</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 LUMINA. All Rights Reserved.</p>
     </div>
 </footer>
 

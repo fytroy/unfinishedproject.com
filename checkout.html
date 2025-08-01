@@ -3,97 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout | Unfinished Project</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Checkout - LUMINA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="main-header">
-  <nav class="nav-bar container">
-    <a href="index.html" class="logo">Unfinished Project</a>
-    <ul class="nav-links">
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav class="nav-bar">
+      <a href="index.html" class="logo">LUMINA</a>
+      <ul class="nav-links">
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a class="cart-icon-container">
+            <svg class="cart-icon" id="open-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span id="cart-count" class="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
   <section class="checkout-section container">
-    <h1 class="fade-in">Checkout</h1>
-    <form id="checkout-form">
-      <div class="checkout-grid">
+    <h1>Checkout</h1>
+    <div class="checkout-grid">
+      <div class="shipping-info">
         <div class="customer-info fade-in">
-          <h2>1. Your Details</h2>
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="address">Shipping Address</label>
-            <textarea id="address" name="address" rows="3" required></textarea>
-          </div>
-        </div>
+          <h2>Shipping Information</h2>
+          <form id="checkout-form">
+            <div class="modern-form-group">
+              <input type="text" id="full-name" name="full-name" placeholder=" " required>
+              <label for="full-name">Full Name</label>
+            </div>
+            <div class="modern-form-group">
+              <input type="email" id="email" name="email" placeholder=" " required>
+              <label for="email">Email Address</label>
+            </div>
+            <div class="modern-form-group">
+              <input type="text" id="address" name="address" placeholder=" " required>
+              <label for="address">Address</label>
+            </div>
+            <div class="modern-form-group">
+              <input type="text" id="city" name="city" placeholder=" " required>
+              <label for="city">City</label>
+            </div>
+            <div class="modern-form-group">
+              <input type="text" id="zip-code" name="zip-code" placeholder=" " required>
+              <label for="zip-code">ZIP Code</label>
+            </div>
+            <div class="modern-form-group">
+              <input type="text" id="country" name="country" placeholder=" " required>
+              <label for="country">Country</label>
+            </div>
 
-        <div class="order-summary fade-in">
-          <h2>2. Order Summary</h2>
-          <div id="order-items" class="order-items">
-          </div>
-          <div class="order-totals">
-            <div class="total-row">
-              <span>Subtotal</span>
-              <span id="subtotal">$0.00</span>
+            <div class="payment-method fade-in">
+              <h2>Payment Method</h2>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="payment-method" value="credit-card" checked>
+                  Credit Card
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment-method" value="paypal">
+                  PayPal
+                </label>
+              </div>
             </div>
-            <div class="total-row">
-              <span>Shipping</span>
-              <span id="shipping">$0.00</span>
-            </div>
-            <div class="total-row grand-total">
-              <span>Grand Total</span>
-              <span id="grand-total">$0.00</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="payment-method fade-in">
-          <h2>3. Payment Method</h2>
-          <div class="payment-options">
-            <label class="payment-option">
-              <input type="radio" name="payment" value="cash" checked>
-              Cash on Delivery
-            </label>
-            <label class="payment-option">
-              <input type="radio" name="payment" value="prepay">
-              Pay Before Delivery
-            </label>
-          </div>
+            <button type="submit" class="btn btn-primary place-order-btn">Place Order</button>
+          </form>
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary place-order-btn">Place Order</button>
-    </form>
+      <div class="order-summary fade-in">
+        <h2>Order Summary</h2>
+        <div id="order-items" class="order-items">
+        </div>
+        <div class="order-totals">
+          <div class="total-row">
+            <span>Subtotal</span>
+            <span id="subtotal">$0.00</span>
+          </div>
+          <div class="total-row">
+            <span>Shipping</span>
+            <span id="shipping">$10.00</span>
+          </div>
+          <div class="total-row grand-total">
+            <span>Total</span>
+            <span id="grand-total">$0.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
 
 <div id="success-modal" class="modal">
   <div class="modal-content">
-    <h2>Order Successful!</h2>
-    <p>Thank you for your purchase. We'll send a confirmation email shortly.</p>
-    <button class="btn btn-primary" onclick="window.location.href='shop.html'">Back to Products</button>
+    <h2>Order Placed Successfully!</h2>
+    <p>Thank you for your purchase. Your order confirmation has been sent to your email.</p>
   </div>
 </div>
 
-<footer class="main-footer">
-  <div class="container">
-    <p>&copy; 2025 Unfinished Project. All rights reserved.</p>
+<div class="cart-menu" id="cart-menu">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-btn" id="close-cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items-menu">
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cart-total-menu">$0.00</span>
+    </div>
+    <a href="checkout.html" class="btn btn-primary checkout-btn">Go to Checkout</a>
+  </div>
+</div>
+
+<footer class="modern-footer">
+  <div class="container footer-container">
+    <div class="footer-section">
+      <h3 class="footer-logo">LUMINA</h3>
+      <p>Handcrafted artisan goods made with care and passion.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>123 Artisan Lane, Craft City, 54321</p>
+      <p>info@lumina.com</p>
+      <p>+1 (555) 123-4567</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 LUMINA. All Rights Reserved.</p>
   </div>
 </footer>
 

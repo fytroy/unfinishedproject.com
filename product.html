@@ -3,59 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Name | Unfinished Project</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Product Name - LUMINA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="main-header">
-  <nav class="nav-bar container">
-    <a href="index.html" class="logo">Unfinished Project</a>
-    <ul class="nav-links">
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav class="nav-bar">
+      <a href="index.html" class="logo">LUMINA</a>
+      <ul class="nav-links">
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a class="cart-icon-container">
+            <svg class="cart-icon" id="open-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span id="cart-count" class="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
   <section class="product-details-section container">
     <div class="product-gallery fade-in">
-      <img src="images/architect-jacket.jpg" alt="The Architect Jacket">
+      <img src="images/product1.jpg" alt="Minimalist Pendant Light">
     </div>
     <div class="product-info fade-in">
-      <h1>The Architect Jacket</h1>
-      <p class="product-price">$249</p>
-
+      <h1>Minimalist Pendant Light</h1>
+      <p class="product-price">$180.00</p>
       <div class="product-description">
-        <h3>Product Story</h3>
-        <p>A heavyweight cotton jacket with visible, contrasting white stitching along the seams. The cuffs and hem are left raw and frayed, designed to evolve with each wear. It's a tribute to the raw, unpolished beauty of a design in its foundational stage.</p>
+        <h3>Description</h3>
+        <p>Elevate your space with our minimalist pendant light. Handcrafted from solid wood and finished with a soft, warm glow, this lamp brings a touch of natural elegance to any room. Perfect for above a dining table or as a statement piece in your living room.</p>
       </div>
-
       <div class="product-options">
         <div class="option-group">
           <label for="size">Size</label>
-          <select id="size">
-            <option value="s">S</option>
-            <option value="m">M</option>
-            <option value="l">L</option>
-            <option value="xl">XL</option>
+          <select id="size" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
           </select>
         </div>
       </div>
-
       <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
     </div>
   </section>
 </main>
 
-<footer class="main-footer">
-  <div class="container">
-    <p>&copy; 2025 Unfinished Project. All rights reserved.</p>
+<div class="cart-menu" id="cart-menu">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-btn" id="close-cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items-menu">
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cart-total-menu">$0.00</span>
+    </div>
+    <a href="checkout.html" class="btn btn-primary checkout-btn">Go to Checkout</a>
+  </div>
+</div>
+
+<footer class="modern-footer">
+  <div class="container footer-container">
+    <div class="footer-section">
+      <h3 class="footer-logo">LUMINA</h3>
+      <p>Handcrafted artisan goods made with care and passion.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p>123 Artisan Lane, Craft City, 54321</p>
+      <p>info@lumina.com</p>
+      <p>+1 (555) 123-4567</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 LUMINA. All Rights Reserved.</p>
   </div>
 </footer>
 

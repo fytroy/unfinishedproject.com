@@ -3,49 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Unfinished Project</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>About Us - LUMINA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="main-header">
-    <nav class="nav-bar container">
-        <a href="index.html" class="logo">Unfinished Project</a>
-        <ul class="nav-links">
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">LUMINA</a>
+            <ul class="nav-links">
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a class="cart-icon-container">
+                        <svg class="cart-icon" id="open-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <main>
     <section class="page-header">
         <div class="container">
-            <h1 class="fade-in">Our Story</h1>
-            <p class="fade-in">A brand built on the belief that beauty is in the process.</p>
+            <h1>Our Story</h1>
+            <p>We are a small team of creators dedicated to bringing unique, handcrafted goods to your home.</p>
         </div>
     </section>
 
     <section class="about-content container">
-        <div class="about-section">
-            <h2 class="fade-in">Our Philosophy</h2>
-            <p class="fade-in">Unfinished Project was born from a desire to challenge the polished world of fast fashion. We reject the idea that clothing must be "perfect" to be beautiful. Instead, we embrace the visible marks of the creation process—the threads waiting to be trimmed, the seams that tell a story, and the fabrics that are allowed to simply exist. Each garment is a tribute to the journey of craftsmanship, and a canvas for your own unique story.</p>
+        <div class="about-section fade-in">
+            <h2>Our Mission</h2>
+            <p>LUMINA was founded on a simple principle: to celebrate the art of craftsmanship. In a world of mass-produced goods, we want to provide an alternative that values human touch, quality materials, and sustainable practices. We partner with local artisans to create pieces that tell a story and stand the test of time.</p>
         </div>
-
-        <div class="about-section">
-            <h2 class="fade-in">Our Commitment to Sustainability</h2>
-            <p class="fade-in">We are committed to ethical and sustainable practices. Our garments are made with responsibly sourced materials, and we produce in small, limited-edition runs to minimize waste. We believe that by creating clothing with a visible history, we encourage a deeper appreciation for each piece, fostering a culture of mindful consumption over disposable fashion.</p>
+        <div class="about-section fade-in">
+            <h2>The Artisans</h2>
+            <p>Our team is a collective of passionate artists, designers, and woodworkers. Each person brings a unique skill set and a deep love for their craft. From the potter's wheel to the loom, every item is a testament to their dedication and talent. We believe in fair wages and ethical sourcing, ensuring that our products are not only beautiful but also made with integrity.</p>
+        </div>
+        <div class="about-section fade-in">
+            <h2>Sustainability</h2>
+            <p>We are committed to minimizing our environmental impact. Our materials are responsibly sourced, and we prioritize natural, renewable resources. Our packaging is made from recycled materials, and we continuously seek new ways to reduce waste and promote a healthier planet. Thank you for supporting a business that cares about both quality and the environment.</p>
         </div>
     </section>
 </main>
 
-<footer class="main-footer">
-    <div class="container">
-        <p>&copy; 2025 Unfinished Project. All rights reserved.</p>
+<div class="cart-menu" id="cart-menu">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-btn" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items-menu">
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-menu">$0.00</span>
+        </div>
+        <a href="checkout.html" class="btn btn-primary checkout-btn">Go to Checkout</a>
+    </div>
+</div>
+
+<footer class="modern-footer">
+    <div class="container footer-container">
+        <div class="footer-section">
+            <h3 class="footer-logo">LUMINA</h3>
+            <p>Handcrafted artisan goods made with care and passion.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>123 Artisan Lane, Craft City, 54321</p>
+            <p>info@lumina.com</p>
+            <p>+1 (555) 123-4567</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 LUMINA. All Rights Reserved.</p>
     </div>
 </footer>
 

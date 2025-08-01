@@ -36,19 +36,19 @@
                 <h3>Filter by</h3>
                 <div class="filter-group">
                     <h4>Category</h4>
-                    <label><input type="checkbox"> Jackets</label>
-                    <label><input type="checkbox"> Shirts</label>
-                    <label><input type="checkbox"> Trousers</label>
+                    <label><input type="checkbox" name="category" value="jackets"> Jackets</label>
+                    <label><input type="checkbox" name="category" value="shirts"> Shirts</label>
+                    <label><input type="checkbox" name="category" value="trousers"> Trousers</label>
                 </div>
                 <div class="filter-group">
                     <h4>Collection</h4>
-                    <label><input type="checkbox"> First Draft</label>
-                    <label><input type="checkbox"> Prototype</label>
+                    <label><input type="checkbox" name="collection" value="first-draft"> First Draft</label>
+                    <label><input type="checkbox" name="collection" value="prototype"> Prototype</label>
                 </div>
             </aside>
 
-            <div class="product-list">
-                <a href="#" class="product-card fade-in">
+            <div id="product-list" class="product-list">
+                <a href="product.html" class="product-card fade-in" data-category="jackets" data-collection="first-draft">
                     <div class="product-image-container">
                         <img src="images/architect-jacket.jpg" alt="The Architect Jacket">
                     </div>
@@ -58,7 +58,7 @@
                         <span>View Product</span>
                     </div>
                 </a>
-                <a href="#" class="product-card fade-in">
+                <a href="product.html" class="product-card fade-in" data-category="shirts" data-collection="first-draft">
                     <div class="product-image-container">
                         <img src="images/sketchbook-shirt.jpg" alt="The Sketchbook Shirt">
                     </div>
@@ -68,7 +68,7 @@
                         <span>View Product</span>
                     </div>
                 </a>
-                <a href="#" class="product-card fade-in">
+                <a href="product.html" class="product-card fade-in" data-category="trousers" data-collection="prototype">
                     <div class="product-image-container">
                         <img src="images/prototype-trousers.jpg" alt="The Blueprint Trousers">
                     </div>
